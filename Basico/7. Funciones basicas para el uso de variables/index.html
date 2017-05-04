@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Funciones para variables</title>
+	<script type="text/javascript">
+	//Calcular la longitud de una cadena de texto.
+	var nombre = "David";
+	var numero_letras = nombre.length;
+	document.write(numero_letras + "<br>");
+
+	//Concatenar cadenas de texto.
+	var mensaje1 = "Hola ";
+	var mensaje2 = "Mundo";
+    var mensaje = mensaje1 + mensaje2;
+    document.write(mensaje + " " + 4 + "<br>");
+
+    //Transformar caracteres a Mayusculas y minusculas.
+    var mayuscula  = "Hola Mundo";
+    document.write(mayuscula.toUpperCase()+"<br>");
+
+    var minuscula = "Hola Mundo";
+    document.write(minuscula.toLowerCase()+"<br>");
+
+    //Obtener caracter que se encuentre en la posición indicada empieza desde cero
+    var caracter_posicion = "Hola Mundo";
+    document.write(caracter_posicion.charAt(3)+"<br>");
+
+    //Calcular la posicion en la que se encuentre el caracter indicado dentro del texto
+    var mensaje = "ana";
+    document.write(mensaje.indexOf("a")+"<br>");  //lee de izq a derecha toma el valor de la primera
+    document.write(mensaje.lastIndexOf("a")+"<br>");  //lee de derecha a izq toma el valor de la ultima letra
+    document.write(mensaje.lastIndexOf("z")+"<br>");
+    //si el caracter no se encuentra traera un valor negativo
+
+    //Extrae una porcion de una cadena de texto
+    var mensaje = "Hola Mundo";
+    var subcadena = mensaje.substring(2);
+    //tambien se pueden utilizar intervalos (,)
+    var subcadena = mensaje.substring(2, 4);
+    document.write(subcadena+"<br>");
+
+
+    //Convierte una cadena de texto en un array de cadenas o letras split (dividir)
+    //palabra =  cada letra en array
+    //pracion = cada palabra en un arreglo
+    var mensaje = "hola mundo soy texto";
+    var palabras = mensaje.split(" ");  //poner argumento para separar como espacio
+    document.write(palabras+"<br>");
+   //palabras = ["hola","mundo","soy","texto"]; 
+
+   var mensaje = "Hola";
+   var palabra = mensaje.split("");
+   document.write(palabra + "<br>");
+
+
+
+   var numero = '$4,500.00';
+
+   var longitud = numero.length;
+
+   document.write(longitud + "<br>"); 
+
+   coma = ',';
+   signo = '$';
+   var cadena = numero.replace(coma, '');
+   subcadena = cadena.replace(signo, '');
+
+   document.write(subcadena  + "<br>");
+
+
+ 
+
+   var numero = parseFloat(subcadena);
+
+   document.write(numero + "<br>");
+
+   resultado = numero  + 3;
+
+   document.write(resultado);
+
+  
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+
+<button></button>
+</body>
+</html>

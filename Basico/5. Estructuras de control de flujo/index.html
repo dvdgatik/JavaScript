@@ -1,0 +1,237 @@
+<html>
+<head>
+	<title>Estructuras de control</title>
+	<script type="text/javascript">
+
+	//ESTRUCTURAS DE SELECCION
+/*las estructuras de control permiten modificar el flujo de ejecución de las instrucciones de un programa*/
+
+/*Estructura if si
+SINTAXIS
+
+if (condicion) {
+	acciones(camino verdadero)
+}
+else {
+	acciones(camino falso)
+}
+
+*/
+
+var numero = 5;
+
+if (numero >= 5)
+{
+	document.write("El numero que escogiste es el 5");
+}
+
+var mostrarmensaje = false;
+
+if (mostrarmensaje)
+{
+	alert("El valor es verdadero");
+
+}
+else 
+{
+    alert("El valor es falso");
+}
+
+
+/*Estructura switch  caso
+SINTAXIS
+switch (condicion) {
+    case valor1:
+       Sentencias a ejecutar si la expresión tiene como valor a valor1
+       break
+    case valor2:
+       Sentencias a ejecutar si la expresión tiene como valor a valor2
+       break
+    case valor3:
+       Sentencias a ejecutar si la expresión tiene como valor a valor3
+       break
+       camino verdadero
+       .
+       .
+       .
+    default:
+       Sentencias a ejecutar si el valor no es ninguno de los anteriores
+       camino falso
+} 
+
+*/
+
+var numeroromano =7;
+document.write("<br>");
+switch (numeroromano)
+{
+	case 1:
+	document.write("I");
+	break;
+	case 2:
+	document.write("II");
+	break;
+	case 3:
+	document.write("III");
+	break;
+	case 4:
+	document.write("IV");
+	break;
+	case 5:
+	document.write("V");
+	break;
+    
+    default:
+    document.write("No se encuentra"+"<br>");
+    break;
+
+}
+
+//ESTRUCTURAS ITERATIVAS O DE REPETICIÓN
+
+/*estructura while mientras hacer
+
+SINTAXIS
+
+valor inicial
+while (condicion)
+{
+	acciones (camino verdadero)
+	contador
+}
+camino falso = salir del ciclo
+
+
+
+*/
+
+var i = 1
+while (i<=10)
+{
+	document.write(i+"<br>");
+	i++;
+
+}
+
+
+/*estructura do while  hacer mientras
+
+SINTAXIS
+valor inicial
+do {
+	acciones (camino verdadero)
+	contador
+}
+while (condicion);
+camino falso = salir del ciclo
+
+
+
+*/
+var i = 1
+do {
+	document.write(i+"<br>");
+	i++;
+}
+while (i<=10);
+
+
+/* estructura do until do while negado - hasta que
+
+SINTAXIS
+valor inicial
+do {
+	acciones (camino falso)
+	contador
+}
+while !((condicion));
+camino verdadero = salir del ciclo
+
+*/
+
+
+var i = 1
+do {
+	document.write(i+"<br>");
+	i++;
+}
+while (!(i>=10));
+
+
+
+/*estructura for - para
+
+for (valor iniciall;condicion;actualizacion(contador))
+{
+	acciones (camino verdadero)
+}
+
+camino falso (salir del ciclo)
+
+
+
+
+*/
+
+
+for (var i = 0;i<=10;i=i+2)
+{
+	document.write(i+"<br>");
+  
+}
+
+
+
+/* Estructura for in
+SINTAXIS
+
+for (indice (posicion) in arreglo)
+{
+	
+}
+
+*/
+var mes;
+var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+for (mes in meses)
+{
+	document.write(meses[mes] +"  in " + "<br>");
+}
+
+
+
+
+
+
+
+
+var num = 10;
+for (var i = 0;i<=10;i++)
+{
+   document.write(num + " X " + i + " = " + (i*num) + "<br>");
+}
+
+
+var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+
+for(i=0;i<=11;i++)
+{
+	document.write(meses[i]+"<br>");
+}
+
+
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

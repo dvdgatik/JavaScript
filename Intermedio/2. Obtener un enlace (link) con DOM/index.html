@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Enlace con DOM</title>
+	<script type="text/javascript">
+    /*links hace referencia a un link*/
+	function getLink()
+	{
+ 
+    //var  l =  document.links; //no funciona en todos los navegadores
+    var  l =  document.getElementById("milink");
+    document.getElementById("result").innerHTML = l.href; // l.milink.href;
+
+
+	}
+	</script>
+</head>
+<body>
+<p><a id="milink" href="https://www.google.com.mx/?gws_rd=ssl">Ir a Google</a></p>
+<p id="result"></p>
+<p><input type="button" value="ok" onclick="getLink();"></p>
+</body>
+</html>

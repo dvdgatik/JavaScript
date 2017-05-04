@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Funciones para Arrays</title>
+	<script type="text/javascript">
+	//calcula el numero de elementos dentro de un array
+	var vocales = ["a","e","i","o","u"];
+	document.write(vocales.length + "<br>");
+
+	//concatenar elementos de arrays
+	var arreglo1 = [1,2,3,4,5];
+	var arreglo2 = [6,7,8,9,10];
+	var resultado = arreglo1.concat(arreglo2);  //se puede agregar corchetes [] o no , [6,7,8,9,10]
+	document.write(resultado+"<br>");
+
+	//une los elementos de un array dentro de una caadena de texto
+    var mensaje = ["Hola", "Mundo"];
+    document.write(mensaje.join(" ")+"<br>"); //recibe parametros
+
+    //elimina el ultimo elemento de un array y lo devuelve - modifica y disminuye
+    var arreglo = [1,2,3,4,5];
+    document.write(arreglo.pop()+"<br>");
+    document.write(arreglo+"<br>");
+
+    //añade un elemento al final de un array - modifica y aumenta
+     var arreglo = [1,2,3,4,5];
+     document.write(arreglo.push(6)+"<br>");
+     document.write(arreglo+"<br>");
+
+     //Elimina el primer elemento de un array - modifica y disminuye
+     var arreglo = [1,2,3,4,5];
+     document.write(arreglo.shift()+"<br>");
+     document.write(arreglo+"<br>");
+
+     //añade un elemento al principio del array - modifica y aumenta
+     var arreglo = [1,2,3,4,5];
+     document.write(arreglo.unshift(0)+"<br>"); // es ilogico que devuelva el numero
+     document.write(arreglo+"<br>");
+
+     //Modifica un array colocando sus elementos en orden inverso
+     var arreglo = ["a","e","i","o","u"];
+     document.write(arreglo.reverse()+"<br>");
+
+     //devuelve un numero original con tantos decimales se indiquen
+     var numero = 1234.67890; //util pra programas con precios
+     document.write(numero.toFixed(1));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html> 

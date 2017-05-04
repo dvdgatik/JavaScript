@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Return y ambito de variables</title>
+	<script type="text/javascript">
+	/*
+	//Existen dos formaas de escribir funciones
+	//Funcion de expresion
+	var hola = function(parametros) { anonima
+		//codigo
+	}
+	hola(argumentos, arg);
+
+	//Funcion de declaracion
+	function hola (parametros) {
+		//Codigo
+	}
+	hola();
+	*/
+
+
+	var operacion = function(numero1,numero2){
+
+		//var resultado = numero1 + numero2;
+		//document.write(resultado);
+		return(numero1 + numero2);  //regresa solo un valor
+
+	};
+
+	var numero1 = 5;
+	var numero2 = 5;
+
+	var res = operacion(numero1, numero2);
+	document.write(res);
+
+
+
+   
+	var hola = function() {
+		  var saludo  = "Hola Mundo";
+		document.write(saludo);
+	}
+	hola();
+	document.write(saludo);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

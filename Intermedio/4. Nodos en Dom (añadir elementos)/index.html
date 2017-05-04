@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+    var tags;
+    function load()
+    {
+
+    	/*mantener una variable cargada
+
+		createElement crear elemento
+		appendchild anexar o añadir un elemento hijo dentro de un padre
+		el texto tambien es un nodo tal cual
+    	*/
+    	tags = document.getElementsByTagName('p');
+
+    }
+
+    function test()
+    {
+    	   var elemento = document.createElement('p');
+    	   var texto =  document.createTextNode("Elemento "+(tags.length+1));
+    	   elemento.appendChild(texto);
+    	   document.getElementById('caja').appendChild(elemento);
+           load();
+    }
+
+
+
+
+	</script>
+</head>
+<body id="cuerpo" onload="load();">
+	<div id="caja">
+
+	</div>
+	<input type="button"  onclick="test();" value="dame clic!">
+
+</body>
+</html>

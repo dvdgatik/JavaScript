@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+    //Modelo de objetos de documento
+
+    //Document es un objeto padre que hace referencia a todo el 
+    //OBJETO.METODO
+
+
+
+    /*
+    write  imprime algun dato
+    getElementById  obtiene un elemento por su id
+    innerHTML manipular el contenido de un tag
+
+    */
+    function testdom()
+    {    
+    	//document.write("Hola");
+    	var obj = document.getElementById("parr");
+    	//alert(obj); // muestra el tipo de elemento
+    	obj.innerHTML = "esto es un parrafo diferente";
+
+    }
+
+	</script>
+</head>
+<body>
+	<div id="cont">
+    	<p id="parr">Esto es un parrafo</p>
+	</div>
+	<input type="button"  onclick="testdom();" value="test">
+
+</body>
+</html>

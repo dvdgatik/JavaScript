@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+     //AJAX es una tecnica que permite hacer peticiones del del cliente al servidor sin recargar la pagina
+     
+     function requestAjax()
+     {
+     	try 
+     	{
+           var request = new XMLHttpRequest();
+     	}
+     	catch (error1)
+     	{
+          try //IE6 o 7
+          {
+              var request = ActiveXObject("Msxm12.XMLHTTP");
+          }
+          catch (error2)
+          {
+          	try // IE 5
+          	{
+          		var request = ActiveXObject("Microsoft.XMLHTTP");
+          	} 
+          	catch (error3)
+          	{
+          		var request = false;
+          	}
+
+          }
+     	}
+     	return request;
+
+     }
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

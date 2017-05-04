@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var cont;
+	var data;
+
+	function onLoad()
+	{
+		cont = document.getElementById("cont");
+		data = new Array();
+	}
+
+	function test()
+	{
+		var request = new requestAjax();
+		request.onreadystatechange = function()  //al momento que la petiicion request cambie de estado
+		{
+			if(request.readyState == 4 && request.status==200) //si esta condicion se lleva acabo ya se realizo la peticion
+			{
+              if(this.responseXML != null)
+              {
+              	data[0] = request.responseXML.getElementsByTagName("nombre").item(0);;
+              	data[1] = request.responseXML.getElementsByTagName("edad").item(0);
+              	data[2] = request.responseXML.getElementsByTagName("nacionalidad").item(0);
+
+              	cont.innerHTML+="Nombre: "+ data[0].firstChild.nodeValue + "<br>"
+              	+ "Edad: " + data[1].firstChild.nodeValue + "<br>"
+              	+ "Nacionalidad: " + data[2].firstChild.nodeValue + "<br>";
+              }
+			}
+		}
+		request.open("GET", "http://localhost:81/Cursos/Curso JavaScript/Intermedio/6.  Realizar peticion(request) Ajax, obtener datos de un archivo XML/data.xml" , true); //sintroona o asintrona
+		request.send();
+	}
+
+     function requestAjax()
+     {
+     	try 
+     	{
+           var request = new XMLHttpRequest();
+     	}
+     	catch (error1)
+     	{
+          try //IE6 o 7
+          {
+              var request = ActiveXObject("Msxm12.XMLHTTP");
+          }
+          catch (error2)
+          {
+          	try // IE 5
+          	{
+          		var request = ActiveXObject("Microsoft.XMLHTTP");
+          	} 
+          	catch (error3)
+          	{
+          		var request = false;
+          	}
+
+          }
+     	}
+     	return request;
+
+     }
+
+
+
+
+
+
+	</script>
+</head>
+<body onload="onLoad();">
+	<p id="cont"></p>
+	<input type="button" value="Hacer request a XML" onclick="test();">
+</body>
+</html>

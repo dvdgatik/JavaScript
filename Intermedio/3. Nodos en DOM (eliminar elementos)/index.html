@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Nodos eliminar elementos</title>
+	<script type="text/javascript">
+	/*
+    getElementsByTagName hace referencia a una etiqueta por su  nombre
+    remove child elimina un elemento hijo de un elemento padre
+    item asigna a cada elemento un indice como un arreglo comenzando desde cero
+	*/
+	var b;
+    function load()
+    {
+        b = document.getElementById("cuerpo");
+    }
+
+    function test() 
+    {
+
+    	//var hijo = document.getElementById('e3');
+    	var list = document.getElementsByTagName('p');
+    	b.removeChild(list.item(0)); //a partir del indice elimina los elementos fuera de  ese intervalo no see eliminan
+    	//b.removeChild(hijo);
+
+    }
+
+
+
+	</script>
+</head>
+<body id="cuerpo" onload="load();">
+<p id="e1">Elemento 1</p>
+<p id="e2">Elemento 2</p>
+<p id="e3">Elemento 3</p>
+<p id="e4">Elemento 4</p>
+<p id="e5">Elemento 5</p>
+<input type="button" onclick="test();" value="Dame Click">
+
+
+</body>
+</html>

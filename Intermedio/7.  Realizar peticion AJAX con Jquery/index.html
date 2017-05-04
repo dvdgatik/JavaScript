@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Peticion AJAX con JQuery</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    // Jquery libreria realizada en javascript con el proposio de que las cosas complejas sean faciles de hacer con metodos definidos
+    //Soporta todos los navegadores
+
+	//Esta funcion especifica como mandar la informacion desde index a test.
+    jQuery.ajax({  //esto se traduce a un arreglo asociativ'
+      url:'http://localhost:81/Cursos/Curso JavaScript/Intermedio/7.  Realizar peticion AJAX con Jquery/test.php',
+      type: 'post',
+      data: {
+      	number: '10'
+      }
+
+
+    }).done(  //declara funcion anonima
+    function (resp) { //respuesta que se obttenga del servidor
+    	alert(resp);
+
+    }
+    );
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
